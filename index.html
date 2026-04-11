@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jasnoor Kaur — Social Media Manager & Content Strategist</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box;-webkit-font-smoothing:antialiased}
+:root{
+  --ink:#18120e;
+  --paper:#f2ece0;
+  --paper2:#e8e0d0;
+  --red:#d94e1e;
+  --red2:#bf3a0a;
+  --tan:#c8b89a;
+  --mid:#7a6f62;
+  --line:rgba(24,18,14,.1);
+  --lineh:rgba(24,18,14,.18);
+}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;cursor:none}
+
+/* CURSOR */
+#cr{position:fixed;width:9px;height:9px;background:var(--red);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:multiply;transition:width .2s,height .2s;display:none}
+#cr2{position:fixed;width:32px;height:32px;border:1.5px solid var(--red);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);mix-blend-mode:multiply;opacity:.5;transition:width .2s,height .2s;display:none}
+
+@media(min-width:1025px){
+  #cr,#cr2{display:block}
+}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:700;display:flex;align-items:center;justify-content:space-between;padding:18px 32px;transition:all .4s;border-bottom:1px solid transparent}
+nav.stuck{background:rgba(242,236,224,.95);border-color:var(--line);backdrop-filter:blur(16px)}
+.logo{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:.1em;color:var(--ink);text-decoration:none}
+.nav-links{display:flex;gap:24px;align-items:center}
+.nav-links a{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid);text-decoration:none;position:relative;padding-bottom:2px;transition:color .3s}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--red);transition:width .3s}
+.nav-links a:hover{color:var(--ink)}
+.nav-links a:hover::after{width:100%}
+.nav-hire{font-size:9px;letter-spacing:.2em;text-transform:uppercase;padding:8px 16px;background:var(--ink);color:var(--paper);text-decoration:none;font-family:'DM Sans',sans-serif;transition:background .3s}
+.nav-hire:hover{background:var(--red)}
+
+/* HERO */
+#hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;padding-top:78px}
+.hero-l{padding:60px 56px 60px;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid var(--line);position:relative;animation:fadeIn .8s ease-out}
+.hero-r{position:relative;overflow:hidden;background:#1a140f}
+.hero-r img{width:100%;height:100%;object-fit:cover;object-position:top center;opacity:.92;display:block;animation:zIn 1.8s cubic-bezier(.16,1,.3,1) both;transform:scale(1.06)}
+@keyframes zIn{to{transform:scale(1);opacity:.95}}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-rb{position:absolute;top:0;left:0;width:4px;height:100%;background:var(--red)}
+.hero-vtag{position:absolute;bottom:40px;left:24px;writing-mode:vertical-rl;font-size:8px;letter-spacing:.3em;text-transform:uppercase;color:rgba(242,236,224,.35)}
+.hero-ghost{position:absolute;top:80px;right:16px;font-family:'Bebas Neue',sans-serif;font-size:110px;color:rgba(242,236,224,.04);line-height:1;user-select:none}
+.h-top{display:flex;justify-content:space-between;align-items:flex-start}
+.h-role{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--red);font-weight:500}
+.h-name{font-family:'Cormorant Garamond',serif;font-size:72px;font-weight:300;line-height:1.1;margin:40px 0;color:var(--ink)}
+.h-desc{font-size:14px;line-height:1.8;color:var(--mid);max-width:380px;margin-bottom:auto;font-weight:300}
+.h-year{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--mid);opacity:.6}
+
+/* SECTION LAYOUT */
+section{padding:120px 52px;border-bottom:1px solid var(--line);animation:fadeIn .8s ease-out}
+.s-header{display:grid;grid-template-columns:35% 65%;gap:60px;margin-bottom:80px;align-items:flex-start}
+.s-title{font-family:'Bebas Neue',sans-serif;font-size:48px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);position:relative;padding-bottom:30px;border-bottom:1px solid var(--lineh)}
+.s-desc{font-size:16px;line-height:1.8;color:var(--mid);}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;margin-top:80px}
+.stat{border-left:1px solid var(--lineh);padding-left:24px}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:42px;letter-spacing:.05em;color:var(--red);margin-bottom:8px}
+.stat-label{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--mid)}
+
+/* SKILLS GRID */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:60px}
+.skill-block{border-top:1px solid var(--lineh);padding-top:24px}
+.skill-cat{font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:16px}
+.skill-items{display:flex;flex-direction:column;gap:12px}
+.skill-item{font-size:13px;line-height:1.6;color:var(--ink);padding:8px 0}
+
+/* PROJECT SECTIONS */
+.project-section{margin:80px 0;padding:40px;background:var(--paper2);border:1px solid var(--line)}
+.project-num{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--red);font-weight:600;margin-bottom:12px}
+.project-title{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:600;margin-bottom:20px;color:var(--ink)}
+.project-grid{display:grid;grid-template-columns:55% 45%;gap:40px;align-items:center;margin-top:30px}
+.project-images{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.project-img{width:100%;height:220px;object-fit:cover;border:1px solid var(--lineh)}
+.project-content h4{font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--red);margin-bottom:12px}
+.project-content p{font-size:14px;line-height:1.8;color:var(--mid);margin-bottom:16px}
+.project-content ul{margin-left:20px;font-size:13px;line-height:1.8;color:var(--mid)}
+.project-content li{margin-bottom:8px}
 
