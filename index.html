@@ -549,3 +549,17 @@ footer p{margin:8px 0}
 </footer>
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Custom cursor (only on desktop)
+const cr = document.getElementById('cr'), cr2 = document.getElementById('cr2');
+let mx=0,my=0,cx=0,cy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;if(window.innerWidth>1024){cr.style.left=mx+'px';cr.style.top=my+'px'}});
+(function loop(){if(window.innerWidth>1024){cx+=(mx-cx)*.11;cy+=(my-cy)*.11;cr2.style.left=cx+'px';cr2.style.top=cy+'px'}requestAnimationFrame(loop)})();
+
+// Hover effects
+document.querySelectorAll('a,button,.sk,.exp-item').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{if(window.innerWidth>1024){cr.style.width='18px';cr.style.height='18px'}});
+  el.addEventListener('mouseleave',()=>{if(window.innerWidth>1024){cr.style.width='9px';cr.style.height='9px'}});
+});
+
+// Sticky nav
+window.addEventListener('scroll',()=>document.getElementById('nav').classLi
