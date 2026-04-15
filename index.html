@@ -3,16 +3,16 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Jasnoor Kaur — Social Media Manager</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+<title>Jasnoor Kaur Social Media Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Alice&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
   :root {
-    --red: #E8002D;
-    --red-deep: #B8001F;
-    --red-light: #FF1744;
+    --red: #C0392B;
+    --red-deep: #96281B;
+    --red-light: #E74C3C;
     --white: #FAFAF8;
     --off-white: #F2F0EC;
-    --black: #0D0D0D;
+    --black: #2C2C2C;
     --grey: #6B6B6B;
     --grey-light: #D4D0C8;
   }
@@ -22,7 +22,7 @@
   html { scroll-behavior: smooth; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     background: var(--white);
     color: var(--black);
     overflow-x: hidden;
@@ -66,7 +66,7 @@
   }
   nav.scrolled { padding: 0.8rem 4rem; box-shadow: 0 4px 30px rgba(0,0,0,0.06); }
   .nav-logo {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Alice', serif;
     font-size: 1.4rem;
     font-weight: 900;
     letter-spacing: -0.02em;
@@ -121,8 +121,8 @@
     animation: fadeUp 0.8s 0.2s forwards;
   }
   .hero-name {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(3.5rem, 6vw, 5.5rem);
+    font-family: 'Alice', serif;
+    font-size: clamp(3rem, 5.5vw, 5rem);
     font-weight: 900;
     line-height: 1.0;
     letter-spacing: -0.03em;
@@ -142,10 +142,10 @@
     animation: fadeUp 0.8s 0.55s forwards;
   }
   .hero-bio {
-    font-size: 0.95rem;
-    line-height: 1.8;
-    color: #444;
-    max-width: 460px;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: #555;
+    max-width: 480px;
     margin-bottom: 3rem;
     opacity: 0;
     animation: fadeUp 0.8s 0.7s forwards;
@@ -189,24 +189,25 @@
   .btn-secondary {
     display: inline-flex; align-items: center; gap: 0.5rem;
     background: transparent;
-    color: var(--black);
+    color: var(--red);
     padding: 0.9rem 2rem;
     font-size: 0.82rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-decoration: none;
-    border: 2px solid var(--black);
+    border: 2px solid var(--red);
     transition: all 0.25s;
     clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
   }
-  .btn-secondary:hover { border-color: var(--red); color: var(--red); transform: translateY(-2px); }
+  .btn-secondary:hover { border-color: var(--red-deep); color: var(--red-deep); transform: translateY(-2px); }
 
-  /* HERO RIGHT — PHOTO */
+  /* HERO RIGHT PHOTO */
   .hero-right {
     position: relative;
-    overflow: hidden;
     background: var(--off-white);
+    display: flex;
+    align-items: flex-end;
   }
   .hero-img-wrap {
     width: 100%; height: 100%;
@@ -215,35 +216,16 @@
     animation: fadeIn 1.2s 0.5s forwards;
   }
   .hero-img-wrap img {
-    width: 100%; height: 100%;
-    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     object-position: center top;
-    filter: contrast(1.05) saturate(0.9);
+    display: block;
   }
   .hero-img-overlay {
     position: absolute; inset: 0;
     background: linear-gradient(135deg, rgba(232,0,45,0.08) 0%, transparent 60%);
   }
-  .hero-accent-bar {
-    position: absolute; left: 0; top: 0; bottom: 0;
-    width: 5px;
-    background: var(--red);
-  }
-  .floating-badge {
-    position: absolute;
-    background: var(--red);
-    color: white;
-    font-family: 'Space Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.6rem 1rem;
-    animation: float 4s ease-in-out infinite;
-  }
-  .badge-1 { bottom: 8rem; left: -1rem; animation-delay: 0s; }
-  .badge-2 { top: 10rem; right: 2rem; background: var(--black); animation-delay: 2s; }
-  @keyframes float {
-    0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-8px); }
   }
 
@@ -275,18 +257,18 @@
   .section-title em { color: var(--red); font-style: italic; }
 
   /* SKILLS */
-  #skills { background: var(--black); color: var(--white); }
+  #skills { background: #f7f4f1; color: var(--black); }
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5px;
     margin-top: 4rem;
-    border: 1.5px solid rgba(255,255,255,0.08);
+    border: 1.5px solid var(--grey-light);
   }
   .skill-card {
-    background: #111;
+    background: var(--white);
     padding: 2.5rem;
-    border: 1.5px solid rgba(255,255,255,0.06);
+    border: 1.5px solid var(--grey-light);
     transition: all 0.3s;
     position: relative;
     overflow: hidden;
@@ -297,7 +279,7 @@
     height: 2px; background: var(--red);
     transform: scaleX(0); transition: transform 0.3s;
   }
-  .skill-card:hover { background: #161616; transform: translateY(-4px); }
+  .skill-card:hover { background: var(--off-white); transform: translateY(-4px); }
   .skill-card:hover::before { transform: scaleX(1); }
   .skill-icon {
     font-size: 2rem; margin-bottom: 1.2rem;
@@ -307,7 +289,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 1.15rem; font-weight: 700;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--black);
   }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
   .skill-tag {
@@ -315,12 +297,12 @@
     font-family: 'Space Mono', monospace;
     letter-spacing: 0.06em;
     padding: 0.3rem 0.7rem;
-    border: 1px solid rgba(232,0,45,0.35);
-    color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(192,57,43,0.35);
+    color: var(--grey);
     border-radius: 0;
     transition: all 0.2s;
   }
-  .skill-card:hover .skill-tag { border-color: var(--red); color: white; }
+  .skill-card:hover .skill-tag { border-color: var(--red); color: var(--red); }
 
   /* SERVICES */
   #services { background: var(--off-white); }
@@ -358,7 +340,7 @@
     margin-bottom: 1.5rem;
   }
   .service-card h3 {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Alice', serif;
     font-size: 1.4rem; font-weight: 700;
     margin-bottom: 1rem;
   }
@@ -492,7 +474,7 @@
   #why .section-tag { color: rgba(255,255,255,0.7); }
   #why .section-tag::before { background: rgba(255,255,255,0.7); }
   #why .section-title { color: white; }
-  #why .section-title em { color: var(--black); }
+  #why .section-title em { color: rgba(255,255,255,0.6); font-style: italic; }
   .why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -516,67 +498,46 @@
   .why-card p { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.8); }
 
   /* CONTACT */
-  #contact { background: var(--black); color: var(--white); }
-  #contact .section-title { color: var(--white); }
+  #contact { background: var(--off-white); color: var(--black); }
+  #contact .section-title { color: var(--black); }
   .contact-wrap {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    gap: 3rem;
     margin-top: 4rem;
     align-items: start;
   }
   .contact-info p {
     font-size: 1.05rem; line-height: 1.8;
-    color: rgba(255,255,255,0.65);
+    color: var(--grey);
     margin-bottom: 3rem;
   }
   .contact-links { display: flex; flex-direction: column; gap: 1.2rem; }
   .contact-link {
     display: flex; align-items: center; gap: 1rem;
-    text-decoration: none; color: rgba(255,255,255,0.7);
+    text-decoration: none; color: var(--grey);
     font-size: 0.9rem;
     padding: 1rem 1.5rem;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid var(--grey-light);
     transition: all 0.25s;
   }
-  .contact-link:hover { border-color: var(--red); color: white; background: rgba(232,0,45,0.1); }
+  .contact-link:hover { border-color: var(--red); color: var(--red); background: rgba(192,57,43,0.06); }
   .contact-link-icon { font-size: 1.3rem; }
   .contact-link-label { font-family: 'Space Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--red); display: block; margin-bottom: 0.15rem; }
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-group label { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.5); }
-  .form-group input, .form-group textarea {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: white; font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem; padding: 0.9rem 1.2rem;
-    outline: none; transition: border-color 0.2s;
-    resize: none;
-  }
-  .form-group input:focus, .form-group textarea:focus { border-color: var(--red); }
-  .form-submit {
-    background: var(--red); color: white;
-    border: none; padding: 1rem 2rem;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.82rem; font-weight: 600;
-    letter-spacing: 0.1em; text-transform: uppercase;
-    cursor: pointer; transition: all 0.25s;
-    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
-  }
-  .form-submit:hover { background: var(--red-deep); transform: translateY(-2px); }
 
   /* FOOTER */
   footer {
-    background: #080808;
+    background: var(--off-white);
+    border-top: 1px solid var(--grey-light);
     padding: 2rem 4rem;
     display: flex; align-items: center; justify-content: space-between;
-    border-top: 1px solid rgba(255,255,255,0.06);
   }
-  footer p { font-size: 0.75rem; color: rgba(255,255,255,0.25); font-family: 'Space Mono', monospace; }
+  footer p { font-size: 0.75rem; color: var(--grey); font-family: 'Space Mono', monospace; }
   .footer-logo {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem; font-weight: 900;
-    color: rgba(255,255,255,0.3);
+    color: var(--grey);
   }
   .footer-logo span { color: var(--red); }
 
@@ -632,9 +593,9 @@
 <!-- HERO -->
 <section id="hero">
   <div class="hero-left">
-    <span class="hero-tag">✦ Social Media Manager & Strategist</span>
+    <span class="hero-tag">Social Media Manager & Strategist</span>
     <h1 class="hero-name">Jasnoor<br><em>Kaur.</em></h1>
-    <p class="hero-role">I don't just manage socials — I engineer growth.</p>
+    <p class="hero-role">I don't just manage socials I engineer growth.</p>
     <p class="hero-bio">
       3+ years turning scroll-past content into stop-and-stare moments. I scaled a brand from 30K to 3M+ organic views in 2 months. Strategy first, aesthetics always, results that speak.
     </p>
@@ -648,7 +609,7 @@
         <span class="stat-label">Reach Growth</span>
       </div>
       <div class="stat-item">
-        <span class="stat-num">3K+</span>
+        <span class="stat-num">4.5K+</span>
         <span class="stat-label">LinkedIn Network</span>
       </div>
     </div>
@@ -658,13 +619,9 @@
     </div>
   </div>
   <div class="hero-right">
-    <div class="hero-accent-bar"></div>
     <div class="hero-img-wrap">
       <img src="assets/jasnoor.jpg" alt="Jasnoor Kaur"/>
-      <div class="hero-img-overlay"></div>
     </div>
-    <div class="floating-badge badge-1">📍 Available for Hire</div>
-    <div class="floating-badge badge-2">⚡ 8%+ Avg Engagement</div>
   </div>
 </section>
 
@@ -674,7 +631,7 @@
   <h2 class="section-title">Skills &<br><em>Expertise</em></h2>
   <div class="skills-grid reveal">
     <div class="skill-card">
-      <span class="skill-icon">📱</span>
+      <span class="skill-icon"></span>
       <h3>Content & Strategy</h3>
       <div class="skill-tags">
         <span class="skill-tag">Content Strategy</span>
@@ -688,7 +645,7 @@
       </div>
     </div>
     <div class="skill-card">
-      <span class="skill-icon">🎨</span>
+      <span class="skill-icon"></span>
       <h3>Design & Multimedia</h3>
       <div class="skill-tags">
         <span class="skill-tag">Canva</span>
@@ -702,7 +659,7 @@
       </div>
     </div>
     <div class="skill-card">
-      <span class="skill-icon">🛠️</span>
+      <span class="skill-icon">️</span>
       <h3>Tools & Platforms</h3>
       <div class="skill-tags">
         <span class="skill-tag">Instagram</span>
@@ -716,7 +673,7 @@
       </div>
     </div>
     <div class="skill-card">
-      <span class="skill-icon">🧠</span>
+      <span class="skill-icon"></span>
       <h3>AI-Assisted Workflows</h3>
       <div class="skill-tags">
         <span class="skill-tag">AI Content Workflows</span>
@@ -738,22 +695,22 @@
     <div class="service-card reveal">
       <div class="service-num">01</div>
       <h3>Social Media Management</h3>
-      <p>End-to-end management of your brand's social presence — content calendars, posting, community engagement, and performance tracking across Instagram, LinkedIn, and X.</p>
+      <p>End-to-end management of your brand's social presence content calendars, posting, community engagement, and performance tracking across Instagram, LinkedIn, and X.</p>
     </div>
     <div class="service-card reveal">
       <div class="service-num">02</div>
       <h3>Content Strategy & Creation</h3>
-      <p>Data-backed content strategies built around your audience. Reels, carousels, captions, hooks — everything crafted to stop the scroll and drive real engagement.</p>
+      <p>Data-backed content strategies built around your audience. Reels, carousels, captions, hooks everything crafted to stop the scroll and drive real engagement.</p>
     </div>
     <div class="service-card reveal">
       <div class="service-num">03</div>
       <h3>Brand Audit & Competitor Analysis</h3>
-      <p>A deep look at what's working, what's not, and exactly where your brand stands vs. the competition — with clear, actionable recommendations to outperform them.</p>
+      <p>A deep look at what's working, what's not, and exactly where your brand stands vs. the competition with clear, actionable recommendations to outperform them.</p>
     </div>
     <div class="service-card reveal">
       <div class="service-num">04</div>
       <h3>Campaign Planning & Launch Strategy</h3>
-      <p>Full campaign blueprints for product launches, seasonal drops, or brand moments — platform-specific assets, messaging pillars, and post-launch analysis included.</p>
+      <p>Full campaign blueprints for product launches, seasonal drops, or brand moments platform-specific assets, messaging pillars, and post-launch analysis included.</p>
     </div>
     <div class="service-card reveal">
       <div class="service-num">05</div>
@@ -763,7 +720,7 @@
     <div class="service-card reveal">
       <div class="service-num">06</div>
       <h3>Short-Form Video Strategy</h3>
-      <p>Reels and Shorts strategy built for discovery and virality. From concept to caption to posting time — everything is optimised for the algorithm and the human eye.</p>
+      <p>Reels and Shorts strategy built for discovery and virality. From concept to caption to posting time everything is optimised for the algorithm and the human eye.</p>
     </div>
   </div>
 </section>
@@ -778,7 +735,7 @@
       <span class="project-tag-pill">Brand Audit</span>
       <span class="project-tag-pill">Competitive Intel</span>
       <h3>Brand Audit: What's Working & What's Not</h3>
-      <p>Picked a real brand and pulled it apart — their content pillars, engagement patterns, visual identity, and missed opportunities. What I'd fix and why.</p>
+      <p>Picked a real brand and pulled it apart their content pillars, engagement patterns, visual identity, and missed opportunities. What I'd fix and why.</p>
       <span class="project-arrow">View Case Study →</span>
     </a>
     <a href="projects/brand-campaign.html" class="project-card">
@@ -786,15 +743,15 @@
       <span class="project-tag-pill">Campaign Strategy</span>
       <span class="project-tag-pill">Product Launch</span>
       <h3>If I Were CMO: A Full Product Launch Campaign</h3>
-      <p>I picked a brand, chose a product, and mapped the entire launch campaign — creative direction, platform strategy, messaging, and rollout timeline.</p>
+      <p>I picked a brand, chose a product, and mapped the entire launch campaign creative direction, platform strategy, messaging, and rollout timeline.</p>
       <span class="project-arrow">View Case Study →</span>
     </a>
     <a href="projects/content-strategy.html" class="project-card">
       <span class="project-num">Project 03 / 04</span>
       <span class="project-tag-pill">Content Strategy</span>
-      <span class="project-tag-pill">7–10 Day Plan</span>
+      <span class="project-tag-pill">7 to 10 Day Plan</span>
       <h3>Content Calendar: 10 Days of Intentional Posting</h3>
-      <p>A full 10-day content plan for a real brand — what to post, when to post it, and the strategic reasoning behind every single decision.</p>
+      <p>A full 10-day content plan for a real brand what to post, when to post it, and the strategic reasoning behind every single decision.</p>
       <span class="project-arrow">View Case Study →</span>
     </a>
     <a href="projects/competitor-analysis.html" class="project-card">
@@ -802,7 +759,7 @@
       <span class="project-tag-pill">Competitor Analysis</span>
       <span class="project-tag-pill">Market Research</span>
       <h3>Competitor Breakdown: Who's Winning & Why</h3>
-      <p>Analyzed 3 competing brands side by side — content volume, engagement rate, visual consistency, audience sentiment, and who has the strongest social presence.</p>
+      <p>Analyzed 3 competing brands side by side content volume, engagement rate, visual consistency, audience sentiment, and who has the strongest social presence.</p>
       <span class="project-arrow">View Case Study →</span>
     </a>
   </div>
@@ -815,11 +772,11 @@
   <div class="timeline">
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Dec 2025 – Present</div>
+      <div class="timeline-date">Dec 2025 to Present</div>
       <div class="timeline-company">The Yard Milkshake Bar · Remote</div>
       <div class="timeline-role">Social Media Manager</div>
       <ul class="timeline-points">
-        <li>Scaled Instagram monthly reach from ~30K (30% ad-driven) to <strong>3M+ fully organic views</strong> within 2 months — a 6,500%+ growth increase</li>
+        <li>Scaled Instagram monthly reach from ~30K (30% ad-driven) to <strong>3M+ fully organic views</strong> within 2 months a 6,500%+ growth increase</li>
         <li>Manage end-to-end strategy, content creation, and publishing for an active dessert brand</li>
         <li>Execute monthly content calendars covering product launches, seasonal drops, and short-form video campaigns</li>
         <li>Analyze platform insights to identify high-performing hooks, formats, and posting windows weekly</li>
@@ -827,7 +784,7 @@
     </div>
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Dec 2025 – Feb 2026</div>
+      <div class="timeline-date">Dec 2025 to Feb 2026</div>
       <div class="timeline-company">keeK Marketing · Remote</div>
       <div class="timeline-role">Social Media Intern</div>
       <ul class="timeline-points">
@@ -838,11 +795,11 @@
     </div>
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">Oct 2025 – Nov 2025</div>
+      <div class="timeline-date">Oct 2025 to Nov 2025</div>
       <div class="timeline-company">PharmaTradz · Remote</div>
       <div class="timeline-role">Social Media Intern</div>
       <ul class="timeline-points">
-        <li>Managed 3+ channels (LinkedIn, Instagram, X) — 40+ monthly posts to 5,000+ combined followers</li>
+        <li>Managed 3+ channels (LinkedIn, Instagram, X) 40+ monthly posts to 5,000+ combined followers</li>
         <li>Drove a <strong>15% engagement lift</strong> through optimized platform-specific copy</li>
         <li>Automated content research with AI tools, cutting manual research time by 40%</li>
         <li>Reduced content approval turnaround by 30% through better coordination workflows</li>
@@ -850,7 +807,7 @@
     </div>
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2024 – 2025</div>
+      <div class="timeline-date">2024 to 2025</div>
       <div class="timeline-company">Freelance · Remote</div>
       <div class="timeline-role">Video Editor</div>
       <ul class="timeline-points">
@@ -861,7 +818,7 @@
     </div>
     <div class="timeline-item">
       <div class="timeline-dot"></div>
-      <div class="timeline-date">2022 – 2024</div>
+      <div class="timeline-date">2022 to 2024</div>
       <div class="timeline-company">Freelance · Remote</div>
       <div class="timeline-role">Graphic Designer</div>
       <ul class="timeline-points">
@@ -879,34 +836,34 @@
   <h2 class="section-title reveal">Why Work<br>With <em>Me?</em></h2>
   <div class="why-grid">
     <div class="why-card reveal">
-      <span class="why-icon">🎯</span>
+      <span class="why-icon"></span>
       <h3>Results, Not Just Content</h3>
-      <p>I don't post for the sake of posting. Every piece of content is built with a clear objective — reach, saves, shares, or conversions. 6,500% organic growth isn't luck, it's strategy.</p>
+      <p>I don't post for the sake of posting. Every piece of content is built with a clear objective reach, saves, shares, or conversions. 6,500% organic growth isn't luck, it's strategy.</p>
     </div>
     <div class="why-card reveal">
-      <span class="why-icon">⚡</span>
+      <span class="why-icon"></span>
       <h3>Fast Learner, Faster Executor</h3>
       <p>I went from intern to managing a brand to 3M+ views in months. I adapt to new tools, platforms, and brand voices quickly and without hand-holding.</p>
     </div>
     <div class="why-card reveal">
-      <span class="why-icon">🤖</span>
+      <span class="why-icon"></span>
       <h3>AI-Powered Efficiency</h3>
-      <p>I use AI tools not as a crutch but as a force multiplier — faster research, smarter ideation, and leaner workflows that let me focus on what actually moves the needle.</p>
+      <p>I use AI tools not as a crutch but as a force multiplier faster research, smarter ideation, and leaner workflows that let me focus on what actually moves the needle.</p>
     </div>
     <div class="why-card reveal">
-      <span class="why-icon">📊</span>
+      <span class="why-icon"></span>
       <h3>Data-Driven Creative</h3>
-      <p>I live in analytics as much as I live in Canva. Engagement rates, reach trends, save patterns — I read them, and I use them to make the next piece better.</p>
+      <p>I live in analytics as much as I live in Canva. Engagement rates, reach trends, save patterns I read them, and I use them to make the next piece better.</p>
     </div>
     <div class="why-card reveal">
-      <span class="why-icon">🌐</span>
+      <span class="why-icon"></span>
       <h3>Remote-Ready & Reliable</h3>
       <p>All of my experience is remote. I know how to communicate clearly, deliver on time, and stay proactive without needing someone to check in on me constantly.</p>
     </div>
     <div class="why-card reveal">
-      <span class="why-icon">🎤</span>
+      <span class="why-icon"></span>
       <h3>Confident Communicator</h3>
-      <p>6x MUN delegate. I'm not shy about presenting ideas, defending strategies, or pitching creative concepts — in a deck, a call, or a Slack message.</p>
+      <p>6x MUN delegate. I'm not shy about presenting ideas, defending strategies, or pitching creative concepts in a deck, a call, or a Slack message.</p>
     </div>
   </div>
 </section>
@@ -917,46 +874,32 @@
   <h2 class="section-title reveal">Get In<br><em>Touch</em></h2>
   <div class="contact-wrap">
     <div class="contact-info reveal">
-      <p>Open to full-time roles, freelance projects, and collaborations. If you're building something and need someone who can make your social presence actually work — let's talk.</p>
+      <p>Open to full-time roles, freelance projects, and collaborations. If you're building something and need someone who can make your social presence actually work let's talk.</p>
       <div class="contact-links">
         <a href="tel:+917778891551" class="contact-link">
-          <span class="contact-link-icon">📞</span>
+          <span class="contact-link-icon" style="font-size:1rem;opacity:0.5;">Tel</span>
           <div>
             <span class="contact-link-label">Phone</span>
             +91 7778891551
           </div>
         </a>
         <a href="mailto:jasnoorkaurjasi@gmail.com" class="contact-link">
-          <span class="contact-link-icon">✉️</span>
+          <span class="contact-link-icon"></span>
           <div>
             <span class="contact-link-label">Email</span>
             jasnoorkaurjasi@gmail.com
           </div>
         </a>
-        <a href="https://linkedin.com" target="_blank" class="contact-link">
-          <span class="contact-link-icon">💼</span>
+        <a href="https://www.linkedin.com/in/jasnoor-kaur1501/" target="_blank" class="contact-link">
+          <span class="contact-link-icon"><span style="font-size:1rem;opacity:0.5;">In</span></span>
           <div>
             <span class="contact-link-label">LinkedIn</span>
-            linkedin.com/in/jasnoork
+            linkedin.com/in/jasnoor-kaur1501
           </div>
         </a>
       </div>
     </div>
-    <div class="contact-form reveal">
-      <div class="form-group">
-        <label>Your Name</label>
-        <input type="text" placeholder="e.g. Sarah from Nykaa"/>
-      </div>
-      <div class="form-group">
-        <label>Email Address</label>
-        <input type="email" placeholder="hello@yourbrand.com"/>
-      </div>
-      <div class="form-group">
-        <label>Message</label>
-        <textarea rows="5" placeholder="Tell me about the role or project..."></textarea>
-      </div>
-      <button class="form-submit" onclick="handleFormSubmit()">Send Message →</button>
-    </div>
+
   </div>
 </section>
 
@@ -964,7 +907,7 @@
 <footer>
   <span class="footer-logo">JK<span>.</span></span>
   <p>© 2026 Jasnoor Kaur · Built with intention.</p>
-  <p style="color:rgba(255,255,255,0.15)">Ahmedabad, India</p>
+  <p>Ahmedabad, India</p>
 </footer>
 
 <script>
@@ -1011,10 +954,6 @@
   }, { threshold: 0.05 });
   document.querySelectorAll('.timeline-item').forEach(el => timelineObserver.observe(el));
 
-  // Form
-  function handleFormSubmit() {
-    alert('Thanks for reaching out! Jasnoor will get back to you soon. 🚀');
-  }
 </script>
 </body>
 </html>
